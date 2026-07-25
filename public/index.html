@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LAN Text Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ─── Login Screen ──────────────────────────────────────────────────── -->
+  <div id="login-screen">
+    <div class="login-card">
+      <h1>🔵 LAN Chat</h1>
+      <p>Enter a username to join the chat room.</p>
+      <form id="login-form">
+        <input
+          type="text"
+          id="username-input"
+          placeholder="Your username..."
+          maxlength="20"
+          autofocus
+          required
+        />
+        <button type="submit">Join</button>
+      </form>
+      <p id="login-error" class="hidden error"></p>
+    </div>
+  </div>
+
+  <!-- ─── Chat Screen ───────────────────────────────────────────────────── -->
+  <div id="chat-screen" class="hidden">
+    <div id="sidebar">
+      <h2>Online</h2>
+      <div id="user-list"></div>
+    </div>
+    <div id="main">
+      <div id="topbar">
+        <h1 id="chat-header">LAN Chat</h1>
+        <span id="status" class="disconnected">Disconnected</span>
+      </div>
+      <div id="messages"></div>
+      <form id="message-form">
+        <input
+          type="text"
+          id="message-input"
+          placeholder="Type a message..."
+          autofocus
+        />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
